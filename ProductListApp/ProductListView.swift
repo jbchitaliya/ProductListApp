@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ProductListView: View {
-    @StateObject private var viewModel = ProductViewModel()
+    @State var viewModel = ProductViewModel()
     @State private var selectedTab = 0 // 0 = All, 1 = Saved
 
     var body: some View {
@@ -81,3 +81,4 @@ struct ProductRowView: View {
         .padding(.vertical, 4)
     }
 }
+

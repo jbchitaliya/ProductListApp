@@ -5,11 +5,11 @@
 //  Created by Jignesh Chitaliya on 12/10/26.
 //
 
-
 import SwiftUI
+import Observation
 
 struct ProductDetailView: View {
-    @ObservedObject var viewModel: ProductViewModel
+    @Bindable var viewModel: ProductViewModel
     let product: Product
 
     var body: some View {
@@ -65,3 +65,4 @@ struct ProductDetailView: View {
         }
     }
 }
+

@@ -7,14 +7,14 @@
 
 
 import Foundation
-import Combine
+import Observation
 
-@MainActor
-class ProductViewModel: ObservableObject {
-    @Published var allProducts: [Product] = []
-    @Published var savedProducts: [Product] = [] 
-    @Published var isLoading = false
-    @Published var errorMessage: String? = nil
+@Observable
+class ProductViewModel {
+    var allProducts: [Product] = []
+    var savedProducts: [Product] = [] 
+    var isLoading = false
+    var errorMessage: String? = nil
 
     // Pagination state
     private var currentPage = 0
@@ -88,3 +88,4 @@ class ProductViewModel: ObservableObject {
         savedProducts.contains { $0.id == product.id }
     }
 }
+
